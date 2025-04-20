@@ -29,7 +29,7 @@ const Index = () => {
 
   return (
     <div className="container">
-      <h1 className="title">ABP माझा : उघडा डोळे बघा नीट </h1>
+      <h1 className="title">Newsletter!</h1>
       {currentArticles.map((option, index) => (
         <div key={index} className="news-card">
           <h2 className="news-title">{option.title}</h2>
