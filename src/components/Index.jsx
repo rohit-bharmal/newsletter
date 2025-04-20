@@ -8,11 +8,7 @@ const Index = () => {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        // https://newsapi.org/docs/get-started#top-headlines
-        const url = `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${
-          import.meta.env.VITE_APP_API_KEY
-        }`;
-        const response = await fetch(url);
+        const response = await fetch("/api/news");
         const newsData = await response.json();
         setNewsData(newsData.articles || []);
       } catch (error) {
